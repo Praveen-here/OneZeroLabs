@@ -1,0 +1,94 @@
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUpDelay {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes deviceFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) rotateX(15deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+/* Animation Classes */
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeInUp-delay-200 {
+    animation: fadeInUpDelay 0.8s ease-out 0.2s forwards;
+}
+
+.animate-fadeInUp-delay-400 {
+    animation: fadeInUpDelay 0.8s ease-out 0.4s forwards;
+}
+
+.animate-slideInUp {
+    animation: slideInUp 1s ease-out 0.6s forwards;
+}
+
+.animate-device {
+    animation: deviceFadeIn 0.8s ease-out forwards;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Intersection Observer Classes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

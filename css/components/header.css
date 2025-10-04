@@ -1,0 +1,78 @@
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 150; /* Higher than footer to stay visible */
+    background: transparent;
+}
+
+.header-container {
+    max-width: none;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+@media (min-width: 640px) {
+    .header-container {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-container {
+        padding: 0 4rem;
+    }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+}
+
+/* Logo */
+.logo {
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+
+.trademark {
+    color: white;
+}
+
+/* Menu Button */
+.menu-section {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    background: #37415196;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+.menu-btn:hover {
+    background: #4b5563;
+}
+
+.menu-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
