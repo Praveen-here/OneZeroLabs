@@ -147,16 +147,7 @@ class AnimationController {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            if (header) {
-                if (scrollTop > 100) {
-                    header.style.background = 'rgba(0, 0, 0, 0.9)';
-                    header.style.backdropFilter = 'blur(10px)';
-                } else {
-                    header.style.background = 'transparent';
-                    header.style.backdropFilter = 'none';
-                }
-            }
-
+            // Keep header background consistent - no changes on scroll
             // Remove parallax effect - keep logo stable
             if (logo) {
                 logo.style.transform = 'none';
