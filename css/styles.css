@@ -524,8 +524,8 @@ img {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     margin-bottom: 4rem;
 }
 
