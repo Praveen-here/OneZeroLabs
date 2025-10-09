@@ -6,6 +6,8 @@
     right: 0;
     z-index: 9999; /* Always stay above all other elements */
     background: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(0px);
 }
 
 .header-container {
@@ -43,6 +45,7 @@
     font-weight: 400;
     color: white;
     margin: 0;
+    transition: all 0.3s ease;
 }
 
 .trademark {
