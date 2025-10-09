@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 150; /* Higher than footer to stay visible */
+    z-index: 9999; /* Always stay above all other elements */
     background: transparent;
 }
 
