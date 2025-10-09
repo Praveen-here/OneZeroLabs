@@ -27,7 +27,7 @@ class HeaderController {
 
         // Close menu when clicking on menu links
         if (this.menuOverlay) {
-            const menuLinks = this.menuOverlay.querySelectorAll('.menu-link');
+            const menuLinks = this.menuOverlay.querySelectorAll('.menu-link, .menu-heading-link');
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => this.closeMenu());
             });

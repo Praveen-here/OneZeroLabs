@@ -124,6 +124,18 @@
     margin-bottom: 4rem;
 }
 
+.menu-heading-link {
+    font-size: inherit;
+    font-weight: inherit;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-heading-link:hover {
+    color: #d3d3d3;
+}
+
 .menu-nav {
     display: flex;
     gap: 3rem;
