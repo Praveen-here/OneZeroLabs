@@ -1,0 +1,140 @@
+{
+  "projects": {
+    "webDevelopment": [
+      {
+        "id": 1,
+        "name": "E-Commerce Platform",
+        "description": "Modern online store with seamless user experience and secure payment integration.",
+        "image": "images/projects/ecommerce-platform.jpg",
+        "category": "Web Development",
+        "technologies": ["React", "Node.js", "MongoDB"]
+      },
+      {
+        "id": 2,
+        "name": "Healthcare Dashboard",
+        "description": "Comprehensive medical dashboard for patient management and analytics.",
+        "image": "images/projects/healthcare-dashboard.jpg",
+        "category": "Web Development",
+        "technologies": ["Vue.js", "Express", "PostgreSQL"]
+      },
+      {
+        "id": 3,
+        "name": "Real Estate Portal",
+        "description": "Interactive property listing platform with advanced search and filtering.",
+        "image": "images/projects/real-estate-portal.jpg",
+        "category": "Web Development",
+        "technologies": ["Angular", "Django", "MySQL"]
+      },
+      {
+        "id": 4,
+        "name": "Learning Management System",
+        "description": "Educational platform for online courses with progress tracking and assessments.",
+        "image": "images/projects/lms-platform.jpg",
+        "category": "Web Development",
+        "technologies": ["React", "Laravel", "Redis"]
+      }
+    ],
+    "uiuxDesign": [
+      {
+        "id": 5,
+        "name": "FinTech Mobile App",
+        "description": "Intuitive banking app design with seamless transaction flow and security.",
+        "image": "images/projects/fintech-app.jpg",
+        "category": "UI/UX Design",
+        "tools": ["Figma", "Adobe XD", "Principle"]
+      },
+      {
+        "id": 6,
+        "name": "Food Delivery Experience",
+        "description": "User-centered design for fast food ordering with personalized recommendations.",
+        "image": "images/projects/food-delivery.jpg",
+        "category": "UI/UX Design",
+        "tools": ["Sketch", "InVision", "Framer"]
+      },
+      {
+        "id": 7,
+        "name": "Travel Booking Interface",
+        "description": "Modern travel app with simplified booking process and trip planning features.",
+        "image": "images/projects/travel-booking.jpg",
+        "category": "UI/UX Design",
+        "tools": ["Figma", "Miro", "Protopie"]
+      },
+      {
+        "id": 8,
+        "name": "Fitness Tracker Dashboard",
+        "description": "Comprehensive fitness app design with workout tracking and progress analytics.",
+        "image": "images/projects/fitness-tracker.jpg",
+        "category": "UI/UX Design",
+        "tools": ["Adobe XD", "Zeplin", "Lottie"]
+      }
+    ],
+    "graphicDesign": [
+      {
+        "id": 9,
+        "name": "Brand Identity Package",
+        "description": "Complete brand identity design including logo, typography, and visual guidelines.",
+        "image": "images/projects/brand-identity.jpg",
+        "category": "Graphic Design",
+        "deliverables": ["Logo Design", "Brand Guidelines", "Stationery"]
+      },
+      {
+        "id": 10,
+        "name": "Marketing Campaign Design",
+        "description": "Creative campaign visuals for social media and digital advertising platforms.",
+        "image": "images/projects/marketing-campaign.jpg",
+        "category": "Graphic Design",
+        "deliverables": ["Social Media Graphics", "Ad Banners", "Print Materials"]
+      },
+      {
+        "id": 11,
+        "name": "Product Packaging Design",
+        "description": "Attractive packaging design that enhances brand value and customer appeal.",
+        "image": "images/projects/packaging-design.jpg",
+        "category": "Graphic Design",
+        "deliverables": ["Package Design", "Label Design", "Product Mockups"]
+      },
+      {
+        "id": 12,
+        "name": "Corporate Presentation",
+        "description": "Professional presentation design for business pitches and company profiles.",
+        "image": "images/projects/corporate-presentation.jpg",
+        "category": "Graphic Design",
+        "deliverables": ["Slide Design", "Infographics", "Visual Assets"]
+      }
+    ],
+    "seoOptimization": [
+      {
+        "id": 13,
+        "name": "E-Commerce SEO Strategy",
+        "description": "Comprehensive SEO optimization resulting in 200% increase in organic traffic.",
+        "image": "images/projects/ecommerce-seo.jpg",
+        "category": "SEO Optimization",
+        "results": ["200% Traffic Increase", "Top 3 Rankings", "Higher Conversions"]
+      },
+      {
+        "id": 14,
+        "name": "Local Business Optimization",
+        "description": "Local SEO strategy that boosted local search visibility and customer acquisition.",
+        "image": "images/projects/local-seo.jpg",
+        "category": "SEO Optimization",
+        "results": ["300% Local Visibility", "Google My Business", "Review Management"]
+      },
+      {
+        "id": 15,
+        "name": "Content Marketing SEO",
+        "description": "Strategic content optimization that improved search rankings and engagement.",
+        "image": "images/projects/content-seo.jpg",
+        "category": "SEO Optimization",
+        "results": ["150% Content Traffic", "Featured Snippets", "Authority Building"]
+      },
+      {
+        "id": 16,
+        "name": "Technical SEO Audit",
+        "description": "Complete technical optimization that enhanced site performance and rankings.",
+        "image": "images/projects/technical-seo.jpg",
+        "category": "SEO Optimization",
+        "results": ["Page Speed Boost", "Core Web Vitals", "Crawlability Improved"]
+      }
+    ]
+  }
+}
