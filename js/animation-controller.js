@@ -25,6 +25,9 @@ class AnimationController {
         
         // Setup header animations
         this.setupHeaderAnimations();
+        
+        // Setup dynamic image sizing
+        this.setupDynamicImageSizing();
     }
 
     initPageLoadAnimations() {
@@ -165,6 +168,65 @@ class AnimationController {
         elements.forEach(el => {
             el.classList.add(animationType);
         });
+    }
+
+    setupDynamicImageSizing() {
+        const heroImage = document.getElementById('heroImage');
+        const heroImageContainer = document.getElementById('heroImageContainer');
+        const heroImageWrapper = document.querySelector('.hero-image-wrapper');
+
+        if (heroImage && heroImageContainer && heroImageWrapper) {
+            // Function to adjust container to image
+            const adjustContainerSize = () => {
+                // Wait for image to load
+                if (heroImage.complete && heroImage.naturalHeight !== 0) {
+                    // Calculate aspect ratio
+                    const aspectRatio = heroImage.naturalWidth / heroImage.naturalHeight;
+                    const containerWidth = heroImageWrapper.offsetWidth;
+                    
+                    // Set dynamic height based on image aspect ratio
+                    const dynamicHeight = containerWidth / aspectRatio;
+                    
+                    // Apply minimum and maximum constraints
+                    const minHeight = window.innerWidth <= 768 ? 200 : 300;
+                    const maxHeight = window.innerWidth <= 768 ? 400 : 600;
+                    
+                    const finalHeight = Math.max(minHeight, Math.min(maxHeight, dynamicHeight));
+                    
+                    // Apply the calculated height
+                    heroImageWrapper.style.height = `${finalHeight}px`;
+                    
+                    // Ensure image maintains aspect ratio
+                    heroImage.style.width = '100%';
+                    heroImage.style.height = '100%';
+                    heroImage.style.objectFit = 'contain';
+                } else {
+                    // Retry when image loads
+                    heroImage.addEventListener('load', adjustContainerSize, { once: true });
+                }
+            };
+
+            // Initial adjustment
+            adjustContainerSize();
+
+            // Adjust on window resize
+            window.addEventListener('resize', adjustContainerSize);
+
+            // Handle image changes (if image src changes dynamically)
+            const imageObserver = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+                        // Reset and recalculate when image source changes
+                        heroImage.addEventListener('load', adjustContainerSize, { once: true });
+                    }
+                });
+            });
+
+            imageObserver.observe(heroImage, {
+                attributes: true,
+                attributeFilter: ['src']
+            });
+        }
     }
 
     // Method to trigger custom animations
