@@ -3,6 +3,7 @@ class HeaderController {
     constructor() {
         this.header = null;
         this.menuBtn = null;
+        this.menuOverlay = null;
         this.isMenuOpen = false;
         this.init();
     }
@@ -18,9 +19,18 @@ class HeaderController {
     setupHeader() {
         this.header = document.getElementById('header');
         this.menuBtn = document.getElementById('menuBtn');
+        this.menuOverlay = document.getElementById('menuOverlay');
         
         if (this.menuBtn) {
             this.menuBtn.addEventListener('click', () => this.toggleMenu());
+        }
+
+        // Close menu when clicking on menu links
+        if (this.menuOverlay) {
+            const menuLinks = this.menuOverlay.querySelectorAll('.menu-link');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => this.closeMenu());
+            });
         }
 
         // Setup scroll effects
@@ -41,21 +51,30 @@ class HeaderController {
     }
 
     openMenu() {
-        console.log('Menu opened');
-        // Add menu open logic here
-        // For now, just log - you can extend this to show a mobile menu
         if (this.menuBtn) {
-            this.menuBtn.textContent = 'Close';
+            this.menuBtn.textContent = '✕';
             this.menuBtn.classList.add('menu-open');
+        }
+        
+        if (this.menuOverlay) {
+            this.menuOverlay.classList.add('active');
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = 'hidden';
         }
     }
 
     closeMenu() {
-        console.log('Menu closed');
-        // Add menu close logic here
+        this.isMenuOpen = false;
+        
         if (this.menuBtn) {
             this.menuBtn.textContent = 'Menu';
             this.menuBtn.classList.remove('menu-open');
+        }
+        
+        if (this.menuOverlay) {
+            this.menuOverlay.classList.remove('active');
+            // Restore body scroll
+            document.body.style.overflow = '';
         }
     }
 

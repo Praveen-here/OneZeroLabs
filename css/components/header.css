@@ -64,15 +64,77 @@
     font-size: 0.875rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: inherit;
+}
+
+.menu-btn.menu-open {
+    background: #37415196 !important;
+    color: white !important;
 }
 
 .menu-btn:hover {
     background: #4b5563;
 }
 
+.menu-btn.menu-open:hover {
+    background: #4b5563 !important;
+}
+
 .menu-btn:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    box-shadow: none;
+}
+
+/* Menu Overlay Styles */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-overlay-content {
+    text-align: center;
+}
+
+.menu-heading {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.menu-nav {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.menu-link {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover {
+    color: #d3d3d3;
 }
