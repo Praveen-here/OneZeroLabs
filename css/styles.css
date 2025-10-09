@@ -512,11 +512,14 @@ img {
 }
 
 .footer-contact .footer-title {
-    font-size: 3rem;
+    font-size: clamp(1.25rem, 4vw, 3rem);
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     color: #9ca3af;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .footer-contact .footer-title .underlined {
@@ -676,8 +679,19 @@ img {
         padding: 3rem 0 1.5rem 0;
     }
     
+    .footer-heading {
+        text-align: left;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+    }
+    
     .footer-contact .footer-title {
-        font-size: 2rem;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        line-height: 1.4;
+    }
+    
+    .footer-title-line {
+        display: block;
     }
     
     .footer-bottom {
