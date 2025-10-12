@@ -63,7 +63,6 @@ class WorksController {
         this.renderProjectCategory('webDevelopment', 'webDevelopmentGrid');
         this.renderProjectCategory('uiuxDesign', 'uiuxDesignGrid');
         this.renderProjectCategory('graphicDesign', 'graphicDesignGrid');
-        this.renderProjectCategory('seoOptimization', 'seoOptimizationGrid');
     }
 
 
@@ -263,7 +262,7 @@ class WorksController {
 
     showErrorState() {
         // Show error state if data loading fails
-        const grids = ['webDevelopmentGrid', 'uiuxDesignGrid', 'graphicDesignGrid', 'seoOptimizationGrid'];
+        const grids = ['webDevelopmentGrid', 'uiuxDesignGrid', 'graphicDesignGrid'];
         
         grids.forEach(gridId => {
             const grid = document.getElementById(gridId);
