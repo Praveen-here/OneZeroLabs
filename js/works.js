@@ -1,10 +1,12 @@
 // Works Page JavaScript - Handles project loading and display
 
+
 class WorksController {
     constructor() {
         this.projects = {};
         this.init();
     }
+
 
     init() {
         if (document.readyState === 'loading') {
@@ -13,6 +15,7 @@ class WorksController {
             this.setupWorks();
         }
     }
+
 
     async setupWorks() {
         try {
@@ -34,6 +37,7 @@ class WorksController {
         }
     }
 
+
     async loadProjects() {
         try {
             const response = await fetch('data/projects.json');
@@ -50,6 +54,7 @@ class WorksController {
         }
     }
 
+
     renderAllProjects() {
         // Render each category
         this.renderProjectCategory('webDevelopment', 'webDevelopmentGrid');
@@ -58,20 +63,24 @@ class WorksController {
         this.renderProjectCategory('seoOptimization', 'seoOptimizationGrid');
     }
 
+
     renderProjectCategory(categoryKey, gridId) {
         const grid = document.getElementById(gridId);
         const projects = this.projects[categoryKey];
+
 
         if (!grid || !projects) {
             console.warn(`Grid ${gridId} or projects for ${categoryKey} not found`);
             return;
         }
 
+
         // Clear loading state
         grid.innerHTML = '';
         
         // Add stagger animation class
         grid.classList.add('stagger-children');
+
 
         // Render each project
         projects.forEach((project, index) => {
@@ -80,10 +89,12 @@ class WorksController {
         });
     }
 
+
     createProjectCard(project, index) {
         const card = document.createElement('div');
         card.className = 'project-card';
         card.dataset.projectId = project.id;
+
 
         // Create image element
         const imageHtml = this.createProjectImage(project);
@@ -97,23 +108,27 @@ class WorksController {
             </div>
         `;
 
+
         // Add click handler
         card.addEventListener('click', () => this.handleProjectClick(project));
+
 
         return card;
     }
 
+
     createProjectImage(project) {
-        // For now, create a placeholder since images might not exist
-        // In a real project, you would handle image loading properly
+        // Display actual image from project data with fallback to icon
         return `
             <div class="project-image">
-                <div class="project-image-placeholder">
+                <img src="${project.image}" alt="${project.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="project-image-placeholder" style="display:none;">
                     ${this.getProjectIcon(project.category)}
                 </div>
             </div>
         `;
     }
+
 
     getProjectIcon(category) {
         const icons = {
@@ -124,6 +139,7 @@ class WorksController {
         };
         return icons[category] || '🔹';
     }
+
 
     handleProjectClick(project) {
         // For now, just log the project
@@ -139,12 +155,14 @@ class WorksController {
         alert(`Project: ${project.name}\n\nCategory: ${project.category}\n\nDescription: ${project.description}`);
     }
 
+
     setupAnimations() {
         // Setup intersection observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
+
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -159,10 +177,12 @@ class WorksController {
             });
         }, observerOptions);
 
+
         // Observe all animatable elements
         const animatableElements = document.querySelectorAll('.fade-in-up, .stagger-children');
         animatableElements.forEach(el => observer.observe(el));
     }
+
 
     animateStaggeredChildren(container) {
         // Add visible class with a slight delay to trigger staggered animation
@@ -171,6 +191,7 @@ class WorksController {
         }, 100);
     }
 
+
     setupInteractions() {
         // Setup smooth scrolling for section navigation if needed
         this.setupSmoothScrolling();
@@ -178,6 +199,7 @@ class WorksController {
         // Setup any other interactions
         this.setupHoverEffects();
     }
+
 
     setupSmoothScrolling() {
         // Handle any anchor links for smooth scrolling
@@ -198,6 +220,7 @@ class WorksController {
         });
     }
 
+
     setupHoverEffects() {
         // Add any additional hover effects that can't be done with CSS alone
         const projectCards = document.querySelectorAll('.project-card');
@@ -213,6 +236,7 @@ class WorksController {
             });
         });
     }
+
 
     showErrorState() {
         // Show error state if data loading fails
@@ -230,6 +254,7 @@ class WorksController {
             }
         });
     }
+
 
     showLoadingState() {
         // Show loading state while data is being fetched
@@ -249,8 +274,10 @@ class WorksController {
     }
 }
 
+
 // Initialize the works controller
 const worksController = new WorksController();
+
 
 // Export for use in other scripts if needed
 window.WorksController = WorksController;
