@@ -142,17 +142,20 @@ class WorksController {
 
 
     handleProjectClick(project) {
-        // For now, just log the project
-        // In a real implementation, you might open a modal or navigate to a detail page
         console.log('Project clicked:', project);
         
-        // You could implement:
-        // - Modal with project details
-        // - Navigation to project detail page
-        // - Lightbox with more images
-        
-        // Example: Simple alert for demonstration
-        alert(`Project: ${project.name}\n\nCategory: ${project.category}\n\nDescription: ${project.description}`);
+        // If it's a web development project with a site link, open the site
+        if (project.category === 'Web Development' && project.siteLink) {
+            window.open(project.siteLink, '_blank');
+        } else {
+            // For other projects, you could implement:
+            // - Modal with project details
+            // - Navigation to project detail page
+            // - Lightbox with more images
+            
+            // Example: Simple alert for demonstration
+            alert(`Project: ${project.name}\n\nCategory: ${project.category}\n\nDescription: ${project.description}`);
+        }
     }
 
 

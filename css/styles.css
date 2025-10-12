@@ -254,6 +254,21 @@ img {
     --arrow-color: #8b5cf6;
 }
 
+/* Service card as anchor link */
+a.service-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.service-card:visited {
+    color: inherit;
+}
+
+a.service-card:focus {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 4px;
+}
+
 .service-card > * {
     position: relative;
     z-index: 2;

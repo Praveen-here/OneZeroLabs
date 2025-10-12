@@ -7,7 +7,8 @@
         "description": "Praasa Consultancy offers research and data analysis support for PhD scholars.",
         "image": "web/praasaconsultancy.png",
         "category": "Web Development",
-        "technologies": ["React", "Node.js", "MongoDB"]
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "siteLink": "https://praasaconsultancy.com"
       },
       {
         "id": 2,
@@ -15,7 +16,8 @@
         "description": "Empowering talent through real-world training and opportunities.",
         "image": "web/samruddipathway.png",
         "category": "Web Development",
-        "technologies": ["Vue.js", "Express", "PostgreSQL"]
+        "technologies": ["Vue.js", "Express", "PostgreSQL"],
+        "siteLink": "https://samruddi-pathway.netlify.app/"
       },
       {
         "id": 4,
@@ -23,7 +25,8 @@
         "description": "Built an LMS featuring smart attendance tracking and automated IA marks management.",
         "image": "web/mlaahl.jpg",
         "category": "Web Development",
-        "technologies": ["React", "Laravel", "Redis"]
+        "technologies": ["React", "Laravel", "Redis"],
+        "siteLink": "https://smart-attendance-n4d0.onrender.com"
       },
       {
         "id": 3,
@@ -31,7 +34,8 @@
         "description": "Developed a Smart IA system that automates internal assessment calculation and management.",
         "image": "web/IA.png",
         "category": "Web Development",
-        "technologies": ["Angular", "Django", "MySQL"]
+        "technologies": ["Angular", "Django", "MySQL"],
+        "siteLink": "https://github.com/MLAAHL/IA-Marks.git"
       }
     ],
     "uiuxDesign": [
