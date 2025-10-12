@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Works - OneZeroLabs® | Portfolio & Projects</title>
-    <meta name="description" content="Explore our portfolio of Web Development, UI/UX Design, Graphic Design, and SEO Optimization projects. See how we help businesses grow.">
-    <meta name="keywords" content="portfolio, projects, web development, UI design, graphic design, SEO, OneZeroLabs">
+    <title>About Us - OneZeroLabs® | Creative Digital Agency</title>
+    <meta name="description" content="Learn about OneZeroLabs - Your Creative Partner for Design, Development and Growth. Meet our team and discover our mission to craft exceptional digital experiences.">
+    <meta name="keywords" content="about us, digital agency, creative team, web development, design agency, OneZeroLabs">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components/header.css">
-    <link rel="stylesheet" href="css/works.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
@@ -42,13 +42,13 @@
     <div id="menuOverlay" class="menu-overlay">
         <div class="menu-overlay-content">
             <h1 class="menu-heading">
-                <a href="#" class="menu-heading-link active">Work</a><br>
+                <a href="works.html" class="menu-heading-link">Work</a><br>
                 <a href="index.html#services-intro" class="menu-heading-link">Services</a><br>
-                <a href="about.html" class="menu-heading-link">About Us</a>
+                <span class="menu-heading-link active">About Us</span>
             </h1>
             <nav class="menu-nav">
                 <a href="index.html" class="menu-link">Home</a>
-                <a href="index.html#footer-contact" class="menu-link">Contact</a>
+                <a href="#footer-contact" class="menu-link">Contact</a>
             </nav>
         </div>
     </div>
@@ -56,64 +56,36 @@
     <!-- Main Content -->
     <div class="main-wrapper">
         <!-- Hero Section -->
-        <section class="works-hero">
+        <section class="about-hero">
             <div class="container">
-                <div class="works-hero-content">
-                    <h1 class="works-title fade-in-up">Our Work</h1>
-                    <p class="works-subtitle fade-in-up">
-                        Discover our latest projects and see how we transform ideas into digital success stories.
-                    </p>
+                <div class="about-hero-content">
+                    <h1 class="about-hero-title fade-in-up">We are <span class="highlight-text">OneZeroLabs</span></h1>
+                    <p class="about-hero-subtitle fade-in-up">Your Creative Partner for Design, Development and Growth</p>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Sections -->
-        <div class="projects-container">
-            
-            <!-- Web Development Projects -->
-            <section class="projects-section" id="web-development">
-                <div class="container">
-                    <div class="section-header fade-in-up">
-                        <span class="section-number">01</span>
-                        <h2 class="section-title">Web Development</h2>
-                        <p class="section-description">Modern, scalable web applications that drive business growth</p>
-                    </div>
-                    <div class="projects-grid" id="webDevelopmentGrid">
-                        <!-- Projects will be dynamically loaded here -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- UI/UX Design Projects -->
-            <section class="projects-section" id="uiux-design">
-                <div class="container">
-                    <div class="section-header fade-in-up">
-                        <span class="section-number">02</span>
-                        <h2 class="section-title">UI/UX Design</h2>
-                        <p class="section-description">User-centered designs that create meaningful digital experiences</p>
-                    </div>
-                    <div class="projects-grid" id="uiuxDesignGrid">
-                        <!-- Projects will be dynamically loaded here -->
+        <!-- About Story Section -->
+        <section class="about-story">
+            <div class="container">
+                <div class="about-story-content">
+                    <div class="about-story-text">
+                        <h2 class="section-title fade-in-up">Our Story</h2>
+                        <div class="story-content fade-in-up">
+                            <p>Founded with a vision to bridge the gap between creativity and technology, OneZeroLabs emerged as a digital agency dedicated to crafting exceptional digital experiences that drive business growth.</p>
+                            
+                            <p>We believe in the power of thoughtful design and strategic development. Every project we undertake is an opportunity to create something meaningful, functional, and beautiful that resonates with your audience and achieves your business goals.</p>
+                            
+                            <p>Our journey began with a simple yet powerful idea: to be more than just a service provider, but a true creative partner that grows alongside your business.</p>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Graphic Design Projects -->
-            <section class="projects-section" id="graphic-design">
-                <div class="container">
-                    <div class="section-header fade-in-up">
-                        <span class="section-number">03</span>
-                        <h2 class="section-title">Graphic Design</h2>
-                        <p class="section-description">Creative visual solutions that strengthen brand identity</p>
-                    </div>
-                    <div class="projects-grid" id="graphicDesignGrid">
-                        <!-- Projects will be dynamically loaded here -->
-                    </div>
-                </div>
-            </section>
-
-        </div>
+            </div>
+        </section>
     </div>
+
+    <!-- Spacer between content and footer -->
+    <div class="services-footer-spacer"></div>
 
     <!-- Footer Contact Section -->
     <footer id="footer-contact" class="footer-contact">
@@ -154,7 +126,7 @@
                         <p>© 2024 OneZeroLabs®. All Rights Reserved.</p>
                         <div class="footer-links">
                             <a href="index.html" class="footer-link">Home</a>
-                            <a href="about.html" class="footer-link">About</a>
+                            <a href="works.html" class="footer-link">Works</a>
                             <a href="#" class="footer-link">Sitemap</a>
                         </div>
                     </div>
@@ -179,6 +151,6 @@
     <script src="js/animations.js"></script>
     <script src="js/components/header.js"></script>
     <script src="js/components/device-mockup.js"></script>
-    <script src="js/works.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
