@@ -133,6 +133,13 @@
     border: 1px solid #222222;
 }
 
+/* Web Development cards - Optimized for complete 16:9 display */
+#webDevelopmentGrid .project-card {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
 /* UI/UX Design cards ONLY - Portrait with SAME width */
 #uiuxDesignGrid .project-card {
     aspect-ratio: 3/4;
@@ -159,6 +166,14 @@
     justify-content: center;
 }
 
+/* Web Development image - Complete 16:9 display */
+#webDevelopmentGrid .project-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: 1rem;
+    background: #1a1a1a;
+}
+
 /* UI/UX Design image - Show FULL image height */
 #uiuxDesignGrid .project-image {
     height: 85%;
@@ -170,6 +185,14 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Web Development images - Fill container completely */
+#webDevelopmentGrid .project-image img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    background: #1a1a1a;
 }
 
 .project-card:hover .project-image img {
@@ -310,6 +333,12 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
+    
+    /* Web Development cards responsive - maintain 16:9 */
+    #webDevelopmentGrid .project-image {
+        aspect-ratio: 16/9;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -336,6 +365,20 @@
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+    
+    /* Web Development cards - Mobile tablet view */
+    #webDevelopmentGrid .project-image {
+        aspect-ratio: 16/9 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 1rem;
+    }
+    
+    #webDevelopmentGrid .project-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
     
     .projects-section {
@@ -367,6 +410,24 @@
     
     .project-image {
         height: 200px;
+    }
+    
+    /* Web Development cards - Mobile phone view */
+    #webDevelopmentGrid .project-card {
+        padding: 1rem;
+    }
+    
+    #webDevelopmentGrid .project-image {
+        aspect-ratio: 16/9 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 0.75rem;
+    }
+    
+    #webDevelopmentGrid .project-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
     
     #uiuxDesignGrid .project-image {
