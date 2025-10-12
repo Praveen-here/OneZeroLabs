@@ -110,7 +110,7 @@
     max-width: 600px;
 }
 
-/* Projects Grid */
+/* Projects Grid - Default Layout (4 columns) */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -118,7 +118,7 @@
     margin-top: 3rem;
 }
 
-/* Project Card */
+/* Project Card - Default (All sections) */
 .project-card {
     position: relative;
     aspect-ratio: 1;
@@ -131,6 +131,11 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border: 1px solid #222222;
+}
+
+/* UI/UX Design cards ONLY - Portrait with SAME width */
+#uiuxDesignGrid .project-card {
+    aspect-ratio: 3/4;
 }
 
 .project-card:hover {
@@ -152,6 +157,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* UI/UX Design image - Show FULL image height */
+#uiuxDesignGrid .project-image {
+    height: 85%;
+    margin-bottom: 0.75rem;
 }
 
 .project-image img {
@@ -183,6 +194,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/* UI/UX content - More compact */
+#uiuxDesignGrid .project-content {
+    padding-top: 0;
+}
+
+#uiuxDesignGrid .project-name {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+#uiuxDesignGrid .project-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
 }
 
 .project-name {
@@ -224,6 +251,7 @@
     opacity: 0;
     transform: translateY(-5px);
     transition: all 0.3s ease;
+    z-index: 10;
 }
 
 .project-card:hover .project-category {
@@ -250,6 +278,30 @@
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* Error State */
+.projects-error {
+    text-align: center;
+    padding: 3rem 0;
+    color: #9ca3af;
+}
+
+.retry-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.retry-btn:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
 }
 
 /* Responsive Design */
@@ -316,6 +368,10 @@
     .project-image {
         height: 200px;
     }
+    
+    #uiuxDesignGrid .project-image {
+        height: 75%;
+    }
 }
 
 /* Animation Classes */
@@ -345,3 +401,7 @@
 .projects-grid.stagger-children.visible .project-card:nth-child(2) { transition-delay: 0.2s; }
 .projects-grid.stagger-children.visible .project-card:nth-child(3) { transition-delay: 0.3s; }
 .projects-grid.stagger-children.visible .project-card:nth-child(4) { transition-delay: 0.4s; }
+.projects-grid.stagger-children.visible .project-card:nth-child(5) { transition-delay: 0.5s; }
+.projects-grid.stagger-children.visible .project-card:nth-child(6) { transition-delay: 0.6s; }
+.projects-grid.stagger-children.visible .project-card:nth-child(7) { transition-delay: 0.7s; }
+.projects-grid.stagger-children.visible .project-card:nth-child(8) { transition-delay: 0.8s; }
