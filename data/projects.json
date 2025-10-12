@@ -3,67 +3,68 @@
     "webDevelopment": [
       {
         "id": 1,
-        "name": "E-Commerce Platform",
-        "description": "Modern online store with seamless user experience and secure payment integration.",
-        "image": "images/projects/ecommerce-platform.jpg",
+        "name": "PRAASA CONSULTANCY",
+        "description": "Praasa Consultancy offers research and data analysis support for PhD scholars.",
+        "image": "web/praasaconsultancy.png",
         "category": "Web Development",
         "technologies": ["React", "Node.js", "MongoDB"]
       },
       {
         "id": 2,
-        "name": "Healthcare Dashboard",
-        "description": "Comprehensive medical dashboard for patient management and analytics.",
-        "image": "images/projects/healthcare-dashboard.jpg",
+        "name": "SAMRUDDHI PATHWAY",
+        "description": "Empowering talent through real-world training and opportunities.",
+        "image": "web/samruddipathway.png",
         "category": "Web Development",
         "technologies": ["Vue.js", "Express", "PostgreSQL"]
       },
       {
-        "id": 3,
-        "name": "Real Estate Portal",
-        "description": "Interactive property listing platform with advanced search and filtering.",
-        "image": "images/projects/real-estate-portal.jpg",
-        "category": "Web Development",
-        "technologies": ["Angular", "Django", "MySQL"]
-      },
-      {
         "id": 4,
         "name": "Learning Management System",
-        "description": "Educational platform for online courses with progress tracking and assessments.",
-        "image": "images/projects/lms-platform.jpg",
+        "description": "Built an LMS featuring smart attendance tracking and automated IA marks management.",
+        "image": "web/mlaahl.jpg",
         "category": "Web Development",
         "technologies": ["React", "Laravel", "Redis"]
+      },
+      {
+        "id": 3,
+        "name": "Smart IA Marks system",
+        "description": "Developed a Smart IA system that automates internal assessment calculation and management.",
+        "image": "web/IA.png",
+        "category": "Web Development",
+        "technologies": ["Angular", "Django", "MySQL"]
       }
     ],
     "uiuxDesign": [
       {
         "id": 5,
-        "name": "FinTech Mobile App",
-        "description": "Intuitive banking app design with seamless transaction flow and security.",
-        "image": "images/projects/fintech-app.jpg",
+
+        "name": "Under 25,Where Students Earn",
+    "description": "Economic opportunity platform connecting students with brands to earn while studying in college.",
+        "image": "uiux/Picsart_25-02-08_19-41-54-723.jpg",
         "category": "UI/UX Design",
         "tools": ["Figma", "Adobe XD", "Principle"]
       },
       {
         "id": 6,
-        "name": "Food Delivery Experience",
-        "description": "User-centered design for fast food ordering with personalized recommendations.",
-        "image": "images/projects/food-delivery.jpg",
+        "name": "Social Expression Platform",
+        "description": "Art-focused social platform where people express their thoughts and emotions through creative content.",
+        "image": "uiux/home.png",
         "category": "UI/UX Design",
         "tools": ["Sketch", "InVision", "Framer"]
       },
       {
         "id": 7,
-        "name": "Travel Booking Interface",
-        "description": "Modern travel app with simplified booking process and trip planning features.",
-        "image": "images/projects/travel-booking.jpg",
+        "name": "Student Opportunities Hub",
+    "description": "Platform showcasing top opportunities, challenges, and networking for students to explore brands and earn.",
+        "image": "uiux/u25.jpg",
         "category": "UI/UX Design",
         "tools": ["Figma", "Miro", "Protopie"]
       },
       {
         "id": 8,
-        "name": "Fitness Tracker Dashboard",
-        "description": "Comprehensive fitness app design with workout tracking and progress analytics.",
-        "image": "images/projects/fitness-tracker.jpg",
+        "name": "Social Events & Communities",
+    "description": "Dark-themed social app featuring trending missions, events like trivia nights, quick connect, and community spaces.",
+        "image": "uiux/Picsart_25-01-03_19-47-14-439.jpg",
         "category": "UI/UX Design",
         "tools": ["Adobe XD", "Zeplin", "Lottie"]
       }
@@ -71,33 +72,33 @@
     "graphicDesign": [
       {
         "id": 9,
-        "name": "Brand Identity Package",
-        "description": "Complete brand identity design including logo, typography, and visual guidelines.",
-        "image": "images/projects/brand-identity.jpg",
+        "name": "Rise of 3D in UI/UX",
+        "description": "The rise of 3D in UI/UX is transforming digital design by creating more immersive and visually dynamic experiences.",
+        "image": "graphicdesigns/Picsart_25-03-09_17-30-39-120.jpg",
         "category": "Graphic Design",
         "deliverables": ["Logo Design", "Brand Guidelines", "Stationery"]
       },
       {
         "id": 10,
-        "name": "Marketing Campaign Design",
-        "description": "Creative campaign visuals for social media and digital advertising platforms.",
-        "image": "images/projects/marketing-campaign.jpg",
+        "name": "How to Create a Portfolio",
+        "description": "A strong portfolio showcases your skills, creativity, and experience by presenting your best work in a clear, engaging format.",
+        "image": "graphicdesigns/Picsart_25-03-16_18-07-44-231.jpg",
         "category": "Graphic Design",
         "deliverables": ["Social Media Graphics", "Ad Banners", "Print Materials"]
       },
       {
         "id": 11,
-        "name": "Product Packaging Design",
-        "description": "Attractive packaging design that enhances brand value and customer appeal.",
-        "image": "images/projects/packaging-design.jpg",
+        "name": "Mastering Colour Selection",
+    "description": "How to pick the right colour palette - choosing the right colours makes your design appealing and effective.",
+        "image": "graphicdesigns/Picsart_25-03-04_16-53-14-678.jpg",
         "category": "Graphic Design",
         "deliverables": ["Package Design", "Label Design", "Product Mockups"]
       },
       {
         "id": 12,
-        "name": "Corporate Presentation",
-        "description": "Professional presentation design for business pitches and company profiles.",
-        "image": "images/projects/corporate-presentation.jpg",
+        "name": "Artists who have Shaped the World",
+        "description": "Exploring legendary artists whose creativity and vision have left a lasting impact on art and culture.",
+        "image": "graphicdesigns/Picsart_25-01-04_14-20-24-939.jpg",
         "category": "Graphic Design",
         "deliverables": ["Slide Design", "Infographics", "Visual Assets"]
       }
