@@ -31,6 +31,9 @@ class WorksController {
             // Setup interactions
             this.setupInteractions();
             
+            // Handle hash navigation from external links
+            this.handleHashNavigation();
+            
         } catch (error) {
             console.error('Error setting up works page:', error);
             this.showErrorState();
@@ -238,6 +241,23 @@ class WorksController {
                 card.style.transform = '';
             });
         });
+    }
+
+    handleHashNavigation() {
+        // Handle navigation from external links with hash (e.g., from index.html)
+        const hash = window.location.hash;
+        if (hash) {
+            // Small delay to ensure all content is rendered
+            setTimeout(() => {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 500); // 500ms delay to ensure content is loaded
+        }
     }
 
 

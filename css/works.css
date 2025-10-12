@@ -1,5 +1,10 @@
 /* Works Page Styles */
 
+/* Smooth scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Works Hero Section */
 .works-hero {
     background: #000000;
@@ -70,8 +75,14 @@
 
 /* Projects Section */
 .projects-section {
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0;
     border-bottom: 1px solid #1a1a1a;
+    scroll-margin-top: 120px;
+}
+
+/* Specific scroll positioning for graphic design section */
+#graphic-design {
+    scroll-margin-top: 150px;
 }
 
 .projects-section:last-child {
